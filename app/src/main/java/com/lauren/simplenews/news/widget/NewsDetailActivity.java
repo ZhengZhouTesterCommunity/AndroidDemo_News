@@ -15,6 +15,8 @@ import com.lauren.simplenews.news.view.NewsDetailView;
 import com.lauren.simplenews.utils.ToolsUtil;
 import com.lauren.simplenews.utils.ImageLoaderUtils;
 
+
+import org.sufficientlysecure.htmltextview.HtmlHttpImageGetter;
 import org.sufficientlysecure.htmltextview.HtmlTextView;
 
 import me.imid.swipebacklayout.lib.SwipeBackLayout;
@@ -69,7 +71,7 @@ public class NewsDetailActivity extends SwipeBackActivity implements NewsDetailV
 
     @Override
     public void showNewsDetialContent(String newsDetailContent) {
-        mTVNewsContent.setHtmlFromString(newsDetailContent, new HtmlTextView.LocalImageGetter());
+        mTVNewsContent.setHtml(newsDetailContent, new HtmlHttpImageGetter(mTVNewsContent));
     }
 
     @Override

@@ -52,7 +52,9 @@ public class OkHttpUtils {
     }
 
     private void getRequest(String url, final ResultCallback callback) {
-        final Request request = new Request.Builder().url(url).build();
+        Request.Builder builder = new Request.Builder();
+        builder.addHeader("User-Agent", "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.62 Safari/537.36");
+        final Request request = builder.url(url).build();
         deliveryResult(callback, request);
     }
 
@@ -116,7 +118,9 @@ public class OkHttpUtils {
             builder.add(param.key, param.value);
         }
         RequestBody requestBody = builder.build();
-        return new Request.Builder().url(url).post(requestBody).build();
+        Request.Builder requestbuilder = new Request.Builder();
+        requestbuilder.addHeader("User-Agent", "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.62 Safari/537.36");
+        return requestbuilder.url(url).post(requestBody).build();
     }
 
 
