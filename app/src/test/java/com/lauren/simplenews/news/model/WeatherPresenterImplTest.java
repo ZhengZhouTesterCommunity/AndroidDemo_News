@@ -1,6 +1,8 @@
 package com.lauren.simplenews.news.model;
 
 
+import android.support.test.runner.AndroidJUnit4;
+
 import com.lauren.simplenews.utils.OkHttpUtils;
 import com.orhanobut.logger.Logger;
 
