@@ -16,7 +16,7 @@ import java.net.URLEncoder;
  * Author : xuanke
  *
  */
-@RunWith(AndroidJUnit4.class)
+//@RunWith(AndroidJUnit4.class)
 public class WeatherPresenterImplTest {
 
     public void testLoadWeatherData() throws UnsupportedEncodingException {
