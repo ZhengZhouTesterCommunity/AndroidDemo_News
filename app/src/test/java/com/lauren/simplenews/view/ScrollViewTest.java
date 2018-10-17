@@ -7,5 +7,5 @@ package com.lauren.simplenews.view;
  */
 public class ScrollViewTest {
 
-    
+
 }

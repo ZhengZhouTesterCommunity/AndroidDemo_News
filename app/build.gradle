@@ -9,6 +9,7 @@ android {
         targetSdkVersion Integer.parseInt(ANDROID_BUILD_TARGET_SDK_VERSION)
         versionCode Integer.parseInt(VERSION_CODE)
         versionName VERSION_NAME
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
@@ -34,4 +35,16 @@ dependencies {
     implementation 'org.sufficientlysecure:html-textview:3.6'
     //日志相关
     implementation 'com.orhanobut:logger:2.2.0'
+
+    // 如果要使用Mockito，你需要添加此条依赖库
+    testImplementation 'org.mockito:mockito-core:1.+'
+    // 如果你要使用Mockito 用于 Android instrumentation tests，那么需要你添加以下三条依赖库
+    androidTestImplementation 'org.mockito:mockito-core:1.+'
+    androidTestImplementation "com.google.dexmaker:dexmaker:1.2"
+    androidTestImplementation "com.google.dexmaker:dexmaker-mockito:1.2"
+
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    // Set this dependency to use JUnit 4 rules
+    androidTestImplementation 'com.android.support.test:rules:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }
