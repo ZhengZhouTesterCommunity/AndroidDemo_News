@@ -16,7 +16,7 @@ buildscript {
 //plugins段放置位置有要示，放在buildscript段前面会报错，放到文件最末尾也报错，紧跟buildscript放置OK，其余位置没有偿试
 plugins {
     // 添加插件信息
-    id "org.sonarqube" version "2.6-rc1"
+    id "org.sonarqube" version "2.6.2"
 }
 
 allprojects {
