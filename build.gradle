@@ -5,7 +5,10 @@ buildscript {
         maven{ url 'https://maven.aliyun.com/repository/google' }
         maven{ url 'https://maven.aliyun.com/repository/jcenter' }
         maven{url 'http://maven.aliyun.com/nexus/content/groups/public'}
-        google()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
         jcenter()
     }
     dependencies {
@@ -27,7 +30,10 @@ allprojects {
         maven{ url 'https://maven.aliyun.com/repository/google' }
         maven{ url 'https://maven.aliyun.com/repository/jcenter' }
         maven{url 'http://maven.aliyun.com/nexus/content/groups/public'}
-        google()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
         jcenter()
     }
 }
